@@ -48,7 +48,7 @@ export default function Budget() {
                 <div
                   className={`h-full rounded-full transition-all ${
                     over ? 'bg-frost-danger' : `bg-${c.color}`
-                  }`
+                  }`}
                   style={{ width: `${Math.min(pct, 100)}%` }}
                 />
               </div>

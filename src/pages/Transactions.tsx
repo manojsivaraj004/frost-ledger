@@ -65,7 +65,7 @@ export default function Transactions() {
                   <td
                     className={`px-4 py-3 text-right font-mono font-medium ${
                       t.amt > 0 ? 'text-frost-success' : 'text-frost-text2'
-                    }`
+                    }`}
                   >
                     {t.amt > 0 ? '+' : ''}{t.amt.toFixed(2)}
                   </td>

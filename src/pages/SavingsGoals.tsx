@@ -55,7 +55,7 @@ export default function SavingsGoals() {
                     done
                       ? 'bg-frost-success'
                       : 'bg-gradient-to-r from-frost-accent2 to-frost-accent'
-                  }`
+                  }`}
                   style={{ width: `${Math.min(pct, 100)}%` }}
                 />
               </div>

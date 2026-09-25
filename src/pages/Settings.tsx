@@ -71,14 +71,14 @@ export default function Settings() {
                           f.value === 'Enabled'
                             ? 'bg-frost-accent2/40'
                             : 'bg-frost-border'
-                        }`
+                        }`}
                       >
                         <span
                           className={`absolute top-0.5 w-4 h-4 rounded-full transition-transform ${
                             f.value === 'Enabled'
                               ? 'left-5 bg-frost-accent'
                               : 'left-0.5 bg-frost-text3'
-                          }`
+                          }`}
                         />
                       </button>
                     ) : (
