@@ -1,3 +1,0 @@
-#Hello
-
-print('abc')
