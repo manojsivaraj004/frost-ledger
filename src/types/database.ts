@@ -18,7 +18,7 @@ export interface Transaction {
   category?: Category | null; account?: Account | null;
 }
 export interface Budget { id: string; user_id: string; category_id: string; allocated: number; spent: number; period: BudgetPeriod; start_date: string; end_date: string | null; created_at: string; updated_at: string; category?: Category | null }
-export interface RecurringTransaction { id: string; user_id: string; account_id: string | null; category_id: string | null; amount: number; description: string; type: TransactionType; frequency: RecurringFrequency; next_date: string; active: boolean; created_at: string; updated_at: string; category?: Category | null; account?: Account | null }
+export interface RecurringTransaction { id: string; user_id: string; account_id: string | null; category_id: string | null; amount: number; description: string; type: 'income' | 'expense'; frequency: RecurringFrequency; next_date: string; active: boolean; created_at: string; updated_at: string; category?: Category | null; account?: Account | null }
 export interface SavingsGoal { id: string; user_id: string; name: string; target_amount: number; current_amount: number; deadline: string | null; created_at: string; updated_at: string }
 export interface UserSettings { id: string; user_id: string; currency: string; date_format: string; language: string; theme: string; accent_color: string; density: string; notifications: { budget_alerts: boolean; recurring_reminders: boolean; goal_milestones: boolean }; created_at: string; updated_at: string }
 export interface BackupHistory { id: string; user_id: string; filename: string; size_bytes: number; type: BackupType; status: BackupStatus; created_at: string }
