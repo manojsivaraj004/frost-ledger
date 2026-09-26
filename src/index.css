@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-frost-border; }
+  html { scrollbar-gutter: stable; }
+  body { @apply bg-frost-bg text-frost-text font-sans antialiased; background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(108, 183, 216, 0.08), transparent), radial-gradient(ellipse 60% 40% at 50% 120%, rgba(212, 164, 74, 0.04), transparent); background-attachment: fixed; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { @apply bg-frost-bg; }
+  ::-webkit-scrollbar-thumb { @apply bg-frost-border2 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-frost-accent2; }
+}
+
+@layer components {
+  .fp-panel { @apply bg-frost-panel border border-frost-border rounded-lg shadow-frost-panel; }
+  .fp-panel-2 { @apply bg-frost-panel2 border border-frost-border rounded-lg; }
+  .fp-btn { @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all duration-150 border border-frost-border bg-frost-panel2 hover:border-frost-accent2 hover:text-frost-accent active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none; }
+  .fp-btn-primary { @apply fp-btn bg-frost-accent2/20 border-frost-accent2 text-frost-accent hover:bg-frost-accent2/30 hover:border-frost-accent; }
+  .fp-btn-danger { @apply fp-btn border-frost-danger/40 text-frost-danger hover:bg-frost-danger/10 hover:border-frost-danger; }
+  .fp-input { @apply w-full bg-frost-bg border border-frost-border rounded-md px-3 py-2 text-sm text-frost-text placeholder-frost-text3 focus:outline-none focus:border-frost-accent2 focus:ring-1 focus:ring-frost-accent2/30 transition-colors; }
+  .fp-label { @apply block text-xs font-medium uppercase tracking-wider text-frost-text2 mb-1.5; }
+  .fp-badge { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium border; }
+  .fp-badge-accent { @apply fp-badge bg-frost-accent/10 border-frost-accent/30 text-frost-accent; }
+  .fp-badge-warn { @apply fp-badge bg-frost-warn/10 border-frost-warn/30 text-frost-warn; }
+  .fp-badge-danger { @apply fp-badge bg-frost-danger/10 border-frost-danger/30 text-frost-danger; }
+  .fp-badge-success { @apply fp-badge bg-frost-success/10 border-frost-success/30 text-frost-success; }
+  .fp-divider { @apply h-px bg-gradient-to-r from-transparent via-frost-border to-transparent; }
+  .fp-section-title { @apply text-xs font-semibold uppercase tracking-[0.2em] text-frost-text3; }
+  .fp-rivet { @apply absolute w-1.5 h-1.5 rounded-full bg-frost-border2; }
+}
+
+@layer utilities {
+  .text-glow { text-shadow: 0 0 8px rgba(108, 183, 216, 0.4); }
+  .ember-glow { text-shadow: 0 0 8px rgba(212, 164, 74, 0.4); }
+  .bg-grid { background-image: linear-gradient(rgba(42, 51, 68, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(42, 51, 68, 0.12) 1px, transparent 1px); background-size: 24px 24px; }
+}
